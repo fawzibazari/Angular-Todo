@@ -2,15 +2,21 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { XyzComponent } from './xyz/xyz.component';
+import { TestserviceServiceService } from './service/testservice-service.service';
+import { FormsModule } from '@angular/forms'
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    XyzComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [TestserviceServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
